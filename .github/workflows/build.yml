@@ -36,4 +36,4 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           USERNAME: ${{ secrets.GPR_USERNAME }}
           TOKEN: ${{ secrets.GPR_TOKEN }}
-        run: ./gradlew build sonarqube --info
+        run: ./gradlew build sonar --info
