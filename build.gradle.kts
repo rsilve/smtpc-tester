@@ -2,6 +2,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.7.20"
+    id("org.jetbrains.kotlinx.kover") version "0.6.1"
+    id("org.sonarqube") version "3.5.0.2730"
     application
 }
 
@@ -41,4 +43,13 @@ tasks.withType<KotlinCompile> {
 
 application {
     mainClass.set("MainKt")
+}
+
+sonarqube {
+    properties {
+        property("sonar.projectKey", "rsilve_smtpc-tester")
+        property("sonar.organization", "rsilve")
+        property("sonar.host.url", "https://sonarcloud.io")
+        property("sonar.coverage.jacoco.xmlReportPaths", "build/reports/kover/xml/report.xml")
+    }
 }
