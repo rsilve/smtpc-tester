@@ -1,4 +1,4 @@
-FROM openjdk:18.0-slim
+FROM amazoncorretto:19-alpine-jdk
 
 RUN groupadd -r smtp && useradd -r -s /bin/false -g smtp smtp
 WORKDIR /work
