@@ -43,7 +43,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: ./src/docker/Dockerfile
+          file: ./src/main/docker/Dockerfile
           load: true
           tags: robertsilve/smtpc-tester:latest
       - name: Run Trivy vulnerability scanner
