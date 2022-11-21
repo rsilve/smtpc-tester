@@ -12,4 +12,4 @@ COPY src/main/docker/entrypoint.sh /work/entrypoint.sh
 USER smtpc
 
 
-ENTRYPOINT ["bash", "/work/entrypoint.sh"]
+ENTRYPOINT ["sh", "/work/entrypoint.sh"]
