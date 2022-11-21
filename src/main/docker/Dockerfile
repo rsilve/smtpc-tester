@@ -1,6 +1,6 @@
 FROM amazoncorretto:19-alpine-jdk
 
-RUN adduser smtpc -G smtpc
+RUN adduser -D smtpc
 WORKDIR /work
 
 ENV DEBIAN_FRONTEND noninteractive
