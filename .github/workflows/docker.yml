@@ -61,5 +61,5 @@ jobs:
           context: .
           file: ./src/main/docker/Dockerfile
           push: true
-          platforms: linux/amd64,linux/arm64v8
+          platforms: linux/amd64
           tags: robertsilve/smtpc-tester:latest
